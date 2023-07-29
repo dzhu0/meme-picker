@@ -1,162 +1,162 @@
-html, body {
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
     margin: 0;
-    font-family: 'Karla', sans-serif;
 }
 
-/*typography*/
-
-h1, h2, h3{
+html,
+body {
+    min-width: 300px;
+    font-family: 'Karla', sans-serif;
     text-align: center;
 }
 
-h1, h2{
-    color: #EED6D3;
-    margin: 0;
+.container {
+    width: 300px;
+    padding: 10px;
+    margin-inline: auto;
 }
 
-h1{
-    font-size: 28px;
-}
-
-h2 {
-    font-size: 16px;
-}
-
-h3{
-    margin: 25px;
-}
-
-/* layout */
-
-header{
-    background-color: #67595E;
-}
-
-.header-inner{
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-    width: 370px;
-    gap: 15px;
-    padding: 10px 0 0 0;
-}
-
-.pumpkin-img{
-    width: 80px;
-}
-
-.controls-container{
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-    margin: 0px auto;
-}
-
-/* controls */
-
-.emotion-radios{
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #bcbcbc;
-    border-radius: 5px;
-}
-
-.radio{
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #bcbcbc;
-    padding: 4px 8px;
-}
-
-.radio:first-child{
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
-
-.radio:last-child{
-    border-bottom: 0;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-
-label{
-    font-size: 14px;
-    padding: 3px;
-    width: 100%;
+label,
+input,
+button {
     cursor: pointer;
 }
 
-.highlight{
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* header */
+
+header {
+    background-color: #67595E;
+}
+
+header .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 0;
+}
+
+.pumpkin-img {
+    width: 80px;
+}
+
+.title {
+    font-size: 16px;
+    color: #EED6D3;
+}
+
+.big-title {
+    font-size: 26px;
+}
+
+/* main */
+
+main {
+    padding-block: 15px;
+}
+
+/* emotion-radios */
+
+.emotion-radios {
+    width: 200px;
+    margin: 15px auto;
+}
+
+.radio {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    border: 1px solid #bcbcbc;
+    border-bottom: 0;
+    padding: 4px 8px;
+}
+
+.radio:first-child {
+    border-radius: 5px 5px 0 0;
+}
+
+.radio:last-child {
+    border-radius: 0 0 5px 5px;
+    border-bottom: 1px solid #bcbcbc;
+}
+
+.radio:hover {
+    background-color: #fff0ee;
+}
+
+.radio.highlight {
     background-color: #fff0ee;
     color: #bd301d;
     font-weight: bold;
     accent-color: #bd301d;
 }
 
-input[type="radio"]{
-    cursor: pointer;
-}
+/* gifs-check-label */
 
-.gifs-check{
+.gifs-check-label {
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin: 16px;
+    font-size: 14px;
+    gap: 10px;
+    margin-bottom: 15px;
 }
 
-.gifs-check-label{
-    width: unset;
-    margin-right: 5px;
-}
+/* get-image-btn */
 
-.get-image-btn{
+.get-image-btn {
     background-color: #67595e;
     color: #eed6d3;
-    padding: 15px 19px;
     font-size: 24px;
     border: none;
     border-radius: 5px;
-    margin-bottom: 8px;
+    padding: 15px 20px;
+}
+
+.get-image-btn:hover {
+    background-color: #574c50;
 }
 
 /* modal */
 
-.meme-modal{
-    display: none; /*flex when displayed*/
+.modal {
     position: fixed;
-    margin: auto;
-    top: 80px;
+    top: 120px;
     left: 0;
     right: 0;
-    align-items: center;
-    justify-content: center;
+    width: 280px;
+    text-align: right;
+    background-color: #fff0ee;
     border: 1px solid #67595e;
     border-radius: 5px;
-    width: 420px;
-    height: 490px;
-    background-color: #fff0ee;
+    padding: 10px;
+    margin: auto;
 }
 
-.cat-img{
-    max-width: 340px;
-    max-height: 420px;
-    border-radius: 5px;
-}
-
-.meme-modal-close-btn{
-    position: absolute;
-    top: 2%;
-    right: 2%;
+.modal-close-btn {
     background-color: transparent;
-    border: 2px solid #555;
+    font-size: 14px;
     color: #555;
+    border: 2px solid #555;
     border-radius: 50%;
     padding: 2px 6px;
-    font-size: 14px;
 }
 
-.meme-modal-close-btn:hover{
-    color: white;
+.modal-close-btn:hover {
     background-color: #bd301d;
-    border: 2px solid #bd301d;
+    border-color: #bd301d;
+    color: white;
+}
+
+.cat-img {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
 }
