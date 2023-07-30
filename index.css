@@ -127,6 +127,7 @@ main {
 
 .modal {
     top: 120px;
+    max-width: unset;
     background-color: inherit;
     border: none;
     margin-inline: auto;
