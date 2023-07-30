@@ -126,17 +126,19 @@ main {
 /* modal */
 
 .modal {
-    position: fixed;
     top: 120px;
-    left: 0;
-    right: 0;
+    background-color: inherit;
+    border: none;
+    margin-inline: auto;
+}
+
+.modal-container {
     width: 280px;
     text-align: right;
     background-color: #fff0ee;
     border: 1px solid #67595e;
     border-radius: 5px;
     padding: 10px;
-    margin: auto;
 }
 
 .modal-close-btn {
